@@ -1,8 +1,78 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    color: white;
-    background-color: black;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: white;
+  background-color: black;
+}
+
+body {
+  min-height: 100%;
+}
+
+/* Colour Styles */
+:root {
+  --black: #151515;
+  --neon: #4ee1a0;
+  --slate-gray: #242424;
+  --gray: #d9d9d9;
+  --white: #fff;
+}
+
+/* Typography */
+
+@font-face {
+    font-family: "Space Grotesk";
+    src: url(./starter-code/assets/fonts/SpaceGrotesk-VariableFont_wght.ttf);
+}
+
+
+.heading-xl {
+  font-size: clamp(2.5rem, 1.444rem + 4.507vw, 5.5rem);
+  font-family: "Space Grotesk";
+  line-height: 0.88;
+  font-weight: 700;
+  letter-spacing: -0.15625rem;
+}
+
+.heading-l {
+  font-family: "Space Grotesk";
+  font-size: clamp(2rem, 1.648rem + 1.502vw, 3rem);
+  line-height: 0.56;
+  letter-spacing: -0.09375rem;
+  font-weight: 700;
+}
+
+.heading-v2 {
+  font-family: "Space Grotesk";
+  font-size: clamp(1.5rem, 1.324rem + 0.751vw, 2rem);
+  line-height: 0.32;
+  letter-spacing: -0.0275rem;
+  font-weight: 700;
+}
+
+.heading-m {
+  font-family: "Space Grotesk";
+  font-size: 1.5rem;
+  line-height: 0.32;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+.body {
+  font-family: "Space Grotesk";
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 0.28;
+  letter-spacing: 0;
+}
+
+.link {
+    font-family: "Space Grotesk";
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 0.26;
+    letter-spacing: 0.143125rem;
+    text-decoration: underline;
 }
