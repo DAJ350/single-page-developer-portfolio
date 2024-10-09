@@ -4,7 +4,6 @@
   padding: 0;
   text-decoration: none;
   color: white;
-  background-color: black;
 }
 
 body {
@@ -18,20 +17,20 @@ body {
   --slate-gray: #242424;
   --gray: #d9d9d9;
   --white: #fff;
+  --dark-gray: #979797;
 }
 
 /* Typography */
 
 @font-face {
-    font-family: "Space Grotesk";
-    src: url(./starter-code/assets/fonts/SpaceGrotesk-VariableFont_wght.ttf);
+  font-family: "Space Grotesk";
+  src: url(./starter-code/assets/fonts/SpaceGrotesk-VariableFont_wght.ttf);
 }
-
 
 .heading-xl {
   font-size: clamp(2.5rem, 1.444rem + 4.507vw, 5.5rem);
   font-family: "Space Grotesk";
-  line-height: 0.88;
+  line-height: 5.5rem;
   font-weight: 700;
   letter-spacing: -0.15625rem;
 }
@@ -39,7 +38,7 @@ body {
 .heading-l {
   font-family: "Space Grotesk";
   font-size: clamp(2rem, 1.648rem + 1.502vw, 3rem);
-  line-height: 0.56;
+  line-height: 3.5rem;
   letter-spacing: -0.09375rem;
   font-weight: 700;
 }
@@ -47,7 +46,7 @@ body {
 .heading-v2 {
   font-family: "Space Grotesk";
   font-size: clamp(1.5rem, 1.324rem + 0.751vw, 2rem);
-  line-height: 0.32;
+  line-height: 2rem;
   letter-spacing: -0.0275rem;
   font-weight: 700;
 }
@@ -55,7 +54,7 @@ body {
 .heading-m {
   font-family: "Space Grotesk";
   font-size: 1.5rem;
-  line-height: 0.32;
+  line-height: 2rem;
   letter-spacing: 0;
   font-weight: 700;
 }
@@ -63,16 +62,134 @@ body {
 .body {
   font-family: "Space Grotesk";
   font-size: 1.125rem;
-  font-weight: 500;
-  line-height: 0.28;
+  font-weight: 400;
+  line-height: 1.75rem;
   letter-spacing: 0;
+  color: var(--gray);
 }
 
 .link {
-    font-family: "Space Grotesk";
-    font-size: 1rem;
-    font-weight: 700;
-    line-height: 0.26;
-    letter-spacing: 0.143125rem;
-    text-decoration: underline;
+  font-family: "Space Grotesk";
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.625rem;
+  letter-spacing: 0.143125rem;
+  text-decoration: underline var(--neon) solid;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 0.625rem;
+  text-decoration-thickness: 2px;
+  text-transform: uppercase;
 }
+
+/* Layout Design */
+
+body {
+  overflow-x: hidden;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  position: relative;
+  background-color: var(--black);
+  padding: 2.5rem 11.458333333333333% 2.5rem;
+}
+
+/* Header Social Links Design */
+
+.social-links {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-links__social-links-container {
+  display: flex;
+  column-gap: 2rem;
+  list-style-type: none;
+  padding-right: 2.059027777777778%;
+  z-index: 1;
+}
+
+
+/* Hero Section */
+
+.hero-section { 
+  margin-top: 7.9375rem;
+  min-height: max-content;
+}
+
+.hero-section__pattern-circle {
+  position: absolute;
+  top: 32.5625rem;
+  left: 53.19444444444444%;
+  z-index: 1;
+}
+
+.hero-section__pattern-rings {
+  position: absolute;
+  top: 8.3125rem;
+  left: -6.25rem;
+}
+
+.hero-section__text-content-container {
+  inline-size: 63.6036036036036%;
+  block-size: fit-content;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.hero-section__heading {
+  z-index: 1;
+}
+
+.hero-section__heading-highlight {
+  text-decoration: underline var(--neon) solid;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 0.9rem;
+  text-decoration-thickness: 6px;
+}
+
+.hero-section__body { 
+  margin: 2.6875rem 0 4.125rem;
+  block-size: 5.25rem;
+  inline-size: 63.03116147308782%;
+}
+
+.hero-section__image {
+  block-size: 45rem;
+  position: absolute;
+  top: 0;
+  left: 57.63888888888889%;
+}
+
+/* Experience Section */
+
+.experience-section {
+  border-top: solid var(--dark-gray) 1px; 
+  margin-top: 16.5rem;
+  padding-top: 4.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 3.625rem 5.9375rem;
+
+}
+
+.experience-section__pattern-rings {
+  position: absolute;
+  top: 67.3125rem;
+  left: 71.8125rem;
+  z-index: 2;
+}
+.experience-section__skill-container {
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 0.875rem;
+}
+
+.experience-section__skill-name {
+  color: var(--white);
+}
+
+.experience-section__skill-experience-length
