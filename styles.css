@@ -244,21 +244,25 @@ body {
 }
 
 .projects-section__project-thumbnail-overlay {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 3rem;
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
   height: 82.13552361396304%;
   width: 100%;
-  background-color: var(--dark-gray);
+  background-color: var(--black);
   z-index: 1;
-  transition: opacity 0.5s ease 0s;
+  transition: opacity 0.3s ease 0s;
 }
 
 .projects-section__project-thumbnail-overlay:hover,
 .projects-section__project-thumbnail-overlay:focus {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .projects-section__project-thumbnail {
