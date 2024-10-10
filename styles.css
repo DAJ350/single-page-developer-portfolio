@@ -79,6 +79,12 @@ body {
   text-underline-offset: 0.625rem;
   text-decoration-thickness: 2px;
   text-transform: uppercase;
+  transition: color 0.3s ease 0s;
+}
+
+.link:hover, 
+.link:focus {
+  color: var(--neon);
 }
 
 /* Layout Design */
@@ -109,6 +115,11 @@ body {
   z-index: 1;
 }
 
+/* Main Content */
+
+.main-content {
+  overflow-x: hidden;
+}
 
 /* Hero Section */
 
@@ -168,7 +179,9 @@ body {
 .experience-section {
   border-top: solid var(--dark-gray) 1px; 
   margin-top: 16.5rem;
+  margin-bottom: 8.75rem;
   padding-top: 4.5rem;
+  padding-right: 7.4375rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
@@ -178,10 +191,11 @@ body {
 
 .experience-section__pattern-rings {
   position: absolute;
-  top: 67.3125rem;
-  left: 71.8125rem;
+  top: 70rem;
+  left: 79.79166666666667%;
   z-index: 2;
 }
+
 .experience-section__skill-container {
   display: flex;
   flex-flow: column nowrap;
@@ -192,4 +206,38 @@ body {
   color: var(--white);
 }
 
-.experience-section__skill-experience-length
+/* Projects Section */
+
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5rem;
+}
+
+.projects-section__header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.projects-section__project-collection-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 33.75rem);
+  grid-template-rows: repeat(3, 30.4375rem);
+  gap: 4.3125rem 1.875rem;
+}
+
+.projects-section__single-project-container {
+  block-size: 100%;
+}
+
+.projects-section__project-thumbnail-overlay {
+  display: none;
+}
+
+.projects-section__project-thumbnail {
+  max-height: 82.13552361396304%;
+  width: auto;
+}
