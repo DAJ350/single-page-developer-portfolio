@@ -82,7 +82,7 @@ body {
   transition: color 0.3s ease 0s;
 }
 
-.link:hover, 
+.link:hover,
 .link:focus {
   color: var(--neon);
 }
@@ -101,7 +101,8 @@ body {
 
 /* Header Social Links Design */
 
-.social-links {
+.social-links,
+.social-links--footer {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -115,6 +116,15 @@ body {
   z-index: 1;
 }
 
+.social-links__icon {
+  fill: var(--white);
+  transition: fill 0.25s ease 0s;
+}
+
+.social-links__icon:hover {
+  fill: var(--neon);
+}
+
 /* Main Content */
 
 .main-content {
@@ -123,7 +133,7 @@ body {
 
 /* Hero Section */
 
-.hero-section { 
+.hero-section {
   margin-top: 7.9375rem;
   min-height: max-content;
 }
@@ -161,7 +171,7 @@ body {
   text-decoration-thickness: 6px;
 }
 
-.hero-section__body { 
+.hero-section__body {
   margin: 2.6875rem 0 4.125rem;
   block-size: 5.25rem;
   inline-size: 63.03116147308782%;
@@ -177,7 +187,7 @@ body {
 /* Experience Section */
 
 .experience-section {
-  border-top: solid var(--dark-gray) 1px; 
+  border-top: solid var(--dark-gray) 1px;
   margin-top: 16.5rem;
   margin-bottom: 8.75rem;
   padding-top: 4.5rem;
@@ -186,7 +196,6 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
   gap: 3.625rem 5.9375rem;
-
 }
 
 .experience-section__pattern-rings {
@@ -218,26 +227,61 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  column-gap: 59.0990990990991%;
 }
-
 
 .projects-section__project-collection-container {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(2, 33.75rem);
+  grid-template-columns: repeat(2, 48.64864864864865%);
   grid-template-rows: repeat(3, 30.4375rem);
-  gap: 4.3125rem 1.875rem;
+  gap: 4.3125rem 2.702702702702703%;
 }
 
 .projects-section__single-project-container {
   block-size: 100%;
+  position: relative;
 }
 
 .projects-section__project-thumbnail-overlay {
-  display: none;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  height: 82.13552361396304%;
+  width: 100%;
+  background-color: var(--dark-gray);
+  z-index: 1;
+  transition: opacity 0.5s ease 0s;
+}
+
+.projects-section__project-thumbnail-overlay:hover,
+.projects-section__project-thumbnail-overlay:focus {
+  opacity: 0.7;
 }
 
 .projects-section__project-thumbnail {
   max-height: 82.13552361396304%;
   width: auto;
+}
+
+.projects-section__project-info-container {
+  padding-top: 1.25rem;
+}
+
+.projects-section__project-name {
+  text-transform: uppercase;
+}
+
+.projects-section__project-skill-bodys-container {
+  display: flex;
+  padding-top: 7px;
+  column-gap: 1.125rem;
+}
+
+.projects-section__cta {
+  display: block;
+  margin: 5rem auto;
+  text-align: center;
 }
