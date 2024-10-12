@@ -6,6 +6,8 @@
   color: white;
 }
 
+
+html,
 body {
   min-height: 100%;
 }
@@ -85,6 +87,7 @@ body {
 .link:hover,
 .link:focus {
   color: var(--neon);
+  cursor: pointer;
 }
 
 /* Layout Design */
@@ -93,13 +96,19 @@ body {
   overflow-x: hidden;
   display: flex;
   flex-flow: column nowrap;
+  justify-content: center;
   align-items: center;
   position: relative;
   background-color: var(--black);
-  padding: 2.5rem 11.458333333333333% 2.5rem;
+  padding: 2.5rem 11.458333333333333%;
 }
 
-/* Header Social Links Design */
+/* Social Links Design */
+
+.social-links--footer {
+  border-top: solid var(--dark-gray) 1px;
+  padding-top: 2.9375rem;
+}
 
 .social-links,
 .social-links--footer {
@@ -220,7 +229,6 @@ body {
 .projects-section {
   display: flex;
   flex-direction: column;
-  row-gap: 5rem;
 }
 
 .projects-section__header-section {
@@ -233,7 +241,7 @@ body {
 .projects-section__project-collection-container {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(2, 48.64864864864865%);
+  grid-template-columns: repeat(2, 33.75rem);
   grid-template-rows: repeat(3, 30.4375rem);
   gap: 4.3125rem 2.702702702702703%;
 }
@@ -262,7 +270,7 @@ body {
 
 .projects-section__project-thumbnail-overlay:hover,
 .projects-section__project-thumbnail-overlay:focus {
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .projects-section__project-thumbnail {
@@ -288,4 +296,67 @@ body {
   display: block;
   margin: 5rem auto;
   text-align: center;
+}
+
+/* Contact Page */
+
+.contact-section {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--slate-gray);
+  width: 69.375rem;
+  padding: 5.25rem 5.864864864864865% 5.75rem;
+  margin-bottom: 92px;
+  border-radius: 12px;
+  overflow-x: hidden;
+  column-gap: 19.81981981981982%;
+}
+
+.contact-section__pattern-rings {
+  position: absolute;
+  left: -12.8125rem;
+  top: 48.444444444444444%;
+}
+
+.contact-section__text-container { 
+  display: inline-flex;
+  row-gap: 2.25rem;
+  width: 50%;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.contact-section__body {
+  inline-size: 27.8125rem;
+}
+
+.contact-section__form {
+  display: inline-flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.contact-section__form-input {
+  background-color: transparent;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  padding-bottom: 1rem;
+  padding-left: 1.5rem;
+  font-family: "Space Grotesk";
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.contact-section__form-input[type="submit"] {
+  border: none;
+  align-self: end;
+  padding-top: 2rem;
+}
+
+.contact-page__footer {
+  width: 100%;
 }
