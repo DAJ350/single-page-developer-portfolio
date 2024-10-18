@@ -36,15 +36,13 @@
         action="./index.html"
         method="post"
       >
-        <div id="name" class="contact-section__form-input-container--name">
+        <div class="contact-section__form-input-container--name">
           <input
-            id="name-input"
+            id="name"
             class="contact-section__form-input"
             name="name"
             type="text"
-            minlength="3"
             placeholder="NAME"
-            required
           />
           <img
             class="contact-section__form-error-icon error"
@@ -61,9 +59,7 @@
             id="email"
             class="contact-section__form-input"
             name="email"
-            type="email"
-            minlength="6"
-            required
+            type="text"
             placeholder="EMAIL"
           />
           <img
@@ -80,13 +76,9 @@
           <textarea
             id="message"
             class="contact-section__form-input"
-            type="text"
             name="message"
             id="message"
             placeholder="MESSAGE"
-            maxlength="500"
-            minlength="10"
-            required
           ></textarea>
           <img
             class="contact-section__form-error-icon error"
@@ -99,14 +91,15 @@
         </div>
 
         <br />
-        <input
+        <button
           id="submit"
           class="contact-section__form-input link"
           type="submit"
           name="sumbit"
           id="submit"
-          value="SEND MESSAGE"
-        />
+        >
+          Send Message
+        </button>
       </form>
     </main>
 
