@@ -363,6 +363,7 @@ body {
 
 .contact-section__form-error-message {
   margin-left: 58%;
+  padding-top: 0.5rem;
 }
 
 .contact-section__form-input {
@@ -395,7 +396,6 @@ body {
 .contact-section__form-input[type="submit"] {
   border: none;
   align-self: end;
-  padding-top: 2rem;
 }
 
 .contact-page__footer {
