@@ -56,21 +56,22 @@ messageInput.addEventListener("input", (e) => {
 form.addEventListener("submit", checkValidity);
 
 function checkValidity(e) {
-  e.preventDefault();
-
   const emailValue = emailInput.value;
   const messageValue = messageInput.value;
   const nameValue = nameInput.value;
 
   if (nameValue < 3) {
+     e.preventDefault();
     const errorElements = [...nameInputContainer.querySelectorAll(".error")];
     errorElements.forEach((element) => (element.style.visibility = "visible"));
     nameInput.style.borderBottomColor = "var(--error-color)";
   } else if (!emailValue.match(re)) {
+     e.preventDefault();
     const errorElements = [...emailInputContainer.querySelectorAll(".error")];
     errorElements.forEach((element) => (element.style.visibility = "visible"));
     emailInput.style.borderBottomColor = "var(--error-color)";
   } else if (messageValue.length < 10) {
+     e.preventDefault();
     const errorElements = [...messageInputContainer.querySelectorAll(".error")];
     errorElements.forEach((element) => (element.style.visibility = "visible"));
     messageInput.style.borderBottomColor = "var(--error-color)";
